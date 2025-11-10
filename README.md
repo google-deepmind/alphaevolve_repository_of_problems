@@ -57,9 +57,9 @@ If you use the code or data in this package, please cite:
 ```
 @article{alphaevolve,
       title={Mathematical exploration and discovery at scale},
-      author={Georgiev, Bogdan and G\'omez-Serrano, Javier and Tao, Terence and Adam Zsolt, Wagner},
+      author={Georgiev, Bogdan and G\'omez-Serrano, Javier and Tao, Terence and Wagner, Adam Zsolt},
       year={2025},
-      journal={arXiv preprint arXiv:2510.xxxxx}
+      journal={arXiv preprint arXiv:2511.02864}
 }
 ```
 
