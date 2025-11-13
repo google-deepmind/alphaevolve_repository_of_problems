@@ -30,9 +30,7 @@ https://google-deepmind.github.io/alphaevolve_repository_of_problems/problems/2.
 
 The current problem status is summarized in the following graphic:
 
-<p align="center">
-      <img src="result_distribution.png" alt="result_distribution" height="600"/>
-</p>
+![Current Status](./status_grid.png)
 
 ## Feedback
 

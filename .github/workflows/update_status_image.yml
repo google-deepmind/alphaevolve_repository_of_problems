@@ -1,0 +1,35 @@
+name: Update Status Image
+
+on:
+  push:
+    paths:
+      - 'status.json'      # Trigger only when this file changes
+      - 'generate_image.py' # Or if you update the script itself
+  workflow_dispatch:       # Allows you to run this manually from the Actions tab if needed
+
+permissions:
+  contents: write
+
+jobs:
+  update-plot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install matplotlib
+
+      - name: Generate image
+        run: python generate_image.py
+
+      - name: Commit and push if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🤖 Auto-update status image [skip ci]
+          file_pattern: 'status_grid.png'
