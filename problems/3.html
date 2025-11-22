@@ -82,6 +82,15 @@
             margin: 0;
         }
 
+        table {
+          border: 2px solid rgb(140 140 140);
+        }
+
+        th,
+        td {
+          border: 1px solid rgb(160 160 160);
+        }
+
         /* Resources List */
         .resources-list {
             list-style: none;
@@ -224,7 +233,60 @@ for non-negative $f \\colon \\mathbb{R} \\to \\mathbb{R}$. What is $C$?
 
             comments: `
                 <p>
-                A further improvement to the constant was subsequently obtained in "<A HREF="https://arxiv.org/abs/2506.16750">An improved example for an autoconvolution inequality</A>" by Boyer and Li.
+                     <table>
+  <caption>
+    Upper bounds for $C$
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$1$</td>
+      <td>Trivial</td>
+    </tr>
+  </tbody>
+</table>           
+
+
+     <table>
+  <caption>
+    Lower bounds for $C$
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td scope="row">$\\log 16/\\pi =0.88254$</td>
+      <td><A HREF="https://arxiv.org/abs/0807.5121">Martin-O'Bryant</A></td>
+      <td>1 Apr 2009</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.88922$</td>
+      <td><A HREF="https://arxiv.org/abs/0907.1379">Matolcsi-Vinuesa</A></td>
+      <td>8 Jul 2009</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.8962$</td>
+      <td><A HREF="https://arxiv.org/abs/2511.02864">Georgiev-Gómez-Serrano-Tao-Wagner</A> [<A HREF="https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb">Colab 1</A>] [<A HREF="https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/autocorrelation_problems/autocorrelation_problems.ipynb">Colab 2</A>]</td>
+      <td>14 May 2025</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.901564$</td>
+      <td><A HREF="https://arxiv.org/abs/2506.16750">Boyer-Li</A></td>
+      <td>Nov 2024 / 10 Aug 2025</td>
+    </tr>
+  </tbody>
+</table>     
                 </p>
             `,
 
