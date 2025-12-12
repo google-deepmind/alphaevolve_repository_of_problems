@@ -82,6 +82,15 @@
             margin: 0;
         }
 
+        table {
+          border: 2px solid rgb(140 140 140);
+        }
+
+        th,
+        td {
+          border: 1px solid rgb(160 160 160);
+        }
+
         /* Resources List */
         .resources-list {
             list-style: none;
@@ -225,6 +234,59 @@ for all even $f$ with $f(0), \\hat f(0) < 0$.  Establish upper and lower bounds 
 
             comments: `
                 <p>
+     <table>
+  <caption>
+    Upper bounds for $C$
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$0.353$</td>
+      <td><A HREF="https://arxiv.org/abs/1602.03366">Goncalves-Oliveira e Silva-Steinerberger</A></td>
+      <td>February 2016</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.32831$</td>
+      <td><A HREF="https://arxiv.org/abs/1712.04438">Cohn-Goncalves</A></td>
+      <td>December 2017</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.321591$</td>
+      <td><A HREF="https://arxiv.org/abs/2511.02864">Georgiev-Gómez-Serrano-Tao-Wagner</A> [<A HREF="https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb">Colab 1</A>] [<A HREF="https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/sphere_packing_uncertainty_principles/sphere_packing_uncertainty_principles.ipynb">Colab 2</A>]</td>
+      <td>14 May 2025</td>
+    </tr>
+    <tr>
+      <td scope="row">$0.3102$</td>
+      <td>Cohn-de Laat-Goncalves (<A HREF="https://terrytao.wordpress.com/2025/11/05/mathematical-exploration-and-discovery-at-scale/comment-page-1/#comment-689336">unpublished</A>)</td>
+      <td>14 May 2025</td>
+    </tr>
+  </tbody>
+</table>       
+     <table>
+  <caption>
+    Lower bounds for $C$
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$0.2025$</td>
+      <td><A HREF="https://arxiv.org/abs/1602.03366">Goncalves-Oliveira e Silva-Steinerberger</A></td>
+      <td>February 2016</td>
+    </tr>
+  </tbody>
+</table>       
 
                 </p>
             `,
