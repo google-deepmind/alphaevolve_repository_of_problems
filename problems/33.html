@@ -14,72 +14,59 @@
         /* General Body Styles */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f9fafb; /* gray-50 */
-            color: #1f2937; /* gray-800 */
+            background-color: #f9fafb;
+            color: #1f2937;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
-        /* Main container for content */
         .container {
-            max-width: 56rem; /* 896px */
+            max-width: 56rem;
             margin: 0 auto;
-            padding: 3rem 1.5rem; /* py-12 px-6 */
+            padding: 3rem 1.5rem;
         }
 
-        /* Card holding the problem */
         .problem-card {
             background-color: #fff;
             padding: 2rem;
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
 
-        /* General section spacing */
         .problem-section {
             margin-bottom: 2rem;
         }
 
-        /* Headers */
-        h1, h2 {
-            margin-top: 0;
-        }
-
         h1 {
-            font-size: 1.875rem; /* text-3xl */
-            font-weight: 700; /* font-bold */
-            color: #111827; /* gray-900 */
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
             padding-bottom: 1rem;
-            border-bottom: 2px solid #f3f4f6; /* border-gray-100 */
-            margin-bottom: 2rem;
+            border-bottom: 2px solid #f3f4f6;
+            margin: 0 0 2rem 0;
         }
 
         h2 {
-            font-size: 1.5rem; /* text-2xl */
-            font-weight: 600; /* font-semibold */
-            color: #1f2937; /* gray-800 */
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0 0 1rem 0;
         }
 
-        /* Problem statement text */
         #problem-statement {
-            color: #374151; /* gray-700 */
+            color: #374151;
         }
         #problem-statement p {
             margin-bottom: 1.25em;
         }
 
-        /* Comments Box */
         .comments-box {
-            background-color: #f9fafb; /* gray-50 */
+            background-color: #f9fafb;
             padding: 1rem;
-            border-radius: 0.375rem; /* rounded-md */
-            border: 1px solid #e5e7eb; /* border-gray-200 */
-            color: #374151; /* gray-700 */
-        }
-        .comments-box p {
-            margin: 0;
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb;
+            color: #374151;
         }
 
         /* Resources List */
@@ -93,9 +80,6 @@
             align-items: center;
             margin-bottom: 0.75rem;
         }
-        .resources-list li:last-child {
-            margin-bottom: 0;
-        }
         .resources-list svg {
             height: 1.5rem;
             width: 1.5rem;
@@ -105,46 +89,56 @@
         .resources-list a {
             text-decoration: none;
             transition: color 0.2s;
+            font-weight: 500;
         }
         .resources-list a:hover {
             text-decoration: underline;
         }
-        .colab-link { color: #2563eb; } /* blue-600 */
-        .colab-link:hover { color: #1d4ed8; } /* blue-800 */
-        .colab-icon { color: #3b82f6; } /* blue-500 */
 
-        .paper-link { color: #7c3aed; } /* purple-600 */
-        .paper-link:hover { color: #5b21b6; } /* purple-800 */
-        .paper-icon { color: #8b5cf6; } /* purple-500 */
+        /* Resource Specific Colors */
+        .experiment-link { color: #0d9488; } 
+        .experiment-link:hover { color: #0f766e; }
+        .experiment-icon { color: #14b8a6; }
 
-        /* KaTeX display math scroll */
+        .colab-link { color: #2563eb; }
+        .colab-link:hover { color: #1d4ed8; }
+        .colab-icon { color: #3b82f6; }
+
+        .paper-link { color: #7c3aed; }
+        .paper-link:hover { color: #5b21b6; }
+        .paper-icon { color: #8b5cf6; }
+
         .katex-display {
             overflow-x: auto;
             overflow-y: hidden;
             padding: 0.5em 0;
         }
-        /* ====================================================================== */
-        /* START: ADDED CSS FOR NAVIGATION                                        */
-        /* ====================================================================== */
+
+        /* Navigation */
         .problem-navigation {
             display: flex;
             justify-content: space-between;
             padding-top: 1.5rem;
             margin-top: 2rem;
-            border-top: 2px solid #f3f4f6; /* Uses the same border style as h1 */
+            border-top: 2px solid #f3f4f6;
         }
-.nav-link {            background-color: #f3f4f6; /* gray-100 */            color: #374151; /* gray-700 */            font-weight: 600;            text-decoration: none;            padding: 0.5rem 1rem; /* Vertical and horizontal padding */            border-radius: 0.375rem; /* rounded-md */            border: 1px solid #e5e7eb; /* gray-200 */            transition: background-color 0.2s;        }        .nav-link:hover {            background-color: #e5e7eb; /* gray-200 */            color: #1f2937; /* gray-800 */            text-decoration: none; /* Keep underline off */        }
-            color: #1d4ed8; /* blue-800 */
-            text-decoration: underline;
+        .nav-link {
+            background-color: #f3f4f6;
+            color: #374151;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb;
+            transition: background-color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: #e5e7eb;
+            color: #1f2937;
         }
         .nav-link.hidden {
-            /* Hides the link while preserving layout space */
             visibility: hidden;
         }
-        /* ====================================================================== */
-        /* END: ADDED CSS FOR NAVIGATION                                          */
-        /* ====================================================================== */
-
     </style>
 </head>
 <body>
@@ -158,95 +152,82 @@
 
             <section class="problem-section">
                 <h2>Problem Statement</h2>
-                <div id="problem-statement">
-                    </div>
+                <div id="problem-statement"></div>
             </section>
 
             <section class="problem-section">
                 <h2>Comments</h2>
-                <div id="problem-comments" class="comments-box">
-                    </div>
+                <div id="problem-comments" class="comments-box"></div>
             </section>
 
             <section>
                 <h2>Resources</h2>
                 <ul class="resources-list">
+                    <!-- Experiment Link Added Here -->
+                    <li id="experiment-list-item">
+                        <svg class="experiment-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                        <a id="experiment-link" href="#" target="_blank" rel="noopener noreferrer" class="experiment-link"></a>
+                    </li>
                     <li>
                         <svg class="colab-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        <a id="colab-link" href="#" target="_blank" rel="noopener noreferrer" class="colab-link">
-                            </a>
+                        <a id="colab-link" href="#" target="_blank" rel="noopener noreferrer" class="colab-link"></a>
                     </li>
                     <li>
                          <svg class="paper-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
-                        <a id="paper-link" href="#" target="_blank" rel="noopener noreferrer" class="paper-link">
-                            </a>
+                        <a id="paper-link" href="#" target="_blank" rel="noopener noreferrer" class="paper-link"></a>
                     </li>
                 </ul>
             </section>
-
-
-
 
             <nav class="problem-navigation">
                 <a id="prev-link" class="nav-link" href="#">&larr; Previous Problem</a>
                 <a id="next-link" class="nav-link" href="#">Next Problem &rarr;</a>
             </nav>
-
-
-
         </div>
     </div>
 
     <script>
-        // ======================================================================
-        //
-        //                  EDIT THIS SECTION FOR EACH NEW PROBLEM
-        //
-        // ======================================================================
-
-
-
         const problemData = {
             title: "33. The Thomson Problem",
-
-            // Use backticks ` for multi-line strings.
-            // Wrap LaTeX in $...$ for inline and $$...$$ for display.
             statement: `
-For any $N>1$, let $C(N)$ denote the infimum of the Coulomb energy
-$$
-E(z_1,\\ldots,z_N) \\coloneqq \\sum_{1 \\leq i < j \\leq N} \\frac{1}{\\|z_i - z_j\\|}
-$$
-where $z_1, \\dots, z_N$ ranges over the unit sphere $\\mathbb{S}^2$.  Establish upper and lower bounds on $C(N)$ that are as strong as possible.  What type of configurations $z_1,\\dots,z_N$ come close to achieving the infimal (ground state) energy?
+                <p>For any $N>1$, let $C(N)$ denote the infimum of the Coulomb energy
+                $$ E(z_1,\\ldots,z_N) \\coloneqq \\sum_{1 \\leq i < j \\leq N} \\frac{1}{\\|z_i - z_j\\|} $$
+                where $z_1, \\dots, z_N$ ranges over the unit sphere $\\mathbb{S}^2$. Establish upper and lower bounds on $C(N)$ that are as strong as possible. What type of configurations $z_1,\\dots,z_N$ come close to achieving the infimal (ground state) energy?</p>
             `,
             comments: `
-                <p>
-                </p>
+                <p></p>
             `,
+            // ADD EXPERIMENT URL HERE
+            experimentURL: "https://alphaevolve-examples.web.app/ae/experiment/2fdd52c5_1bfb_4f3e_90b4_e9e40ce956e5", 
+            experimentText: "Link to Experiment",
 
             colabURL: "https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/thomson_problem/thomson_problem.ipynb",
             colabText: "Explore in Google Colab",
 
             paperURL: "https://arxiv.org/abs/2511.02864",
-            paperText: "See Section 6.18, in \"Mathematical Exploration and Discovery at Scale \" paper"
+            paperText: "See Section 6.18 in \"Mathematical Exploration and Discovery at Scale\" paper"
         };
 
-        // ======================================================================
-        //             (No need to edit anything below this line)
-        // ======================================================================
-
-        // MODIFICATION: This function is now called by the `onload` attribute
-        // of the auto-render script tag. This ensures all the KaTeX logic
-        // is loaded and ready before we try to use it.
         function initializeAndRender() {
-            // Populate the page with the data from the problemData object
-            document.title = problemData.title; // Also update the page title
+            document.title = problemData.title;
             document.getElementById('problem-title').innerHTML = problemData.title;
             document.getElementById('problem-statement').innerHTML = problemData.statement;
             document.getElementById('problem-comments').innerHTML = problemData.comments;
+
+            // Populate Experiment Link
+            const experimentLink = document.getElementById('experiment-link');
+            if (problemData.experimentURL && problemData.experimentURL !== "#") {
+                experimentLink.href = problemData.experimentURL;
+                experimentLink.textContent = problemData.experimentText;
+            } else {
+                document.getElementById('experiment-list-item').style.display = 'none';
+            }
 
             const colabLink = document.getElementById('colab-link');
             colabLink.href = problemData.colabURL;
@@ -256,7 +237,6 @@ where $z_1, \\dots, z_N$ ranges over the unit sphere $\\mathbb{S}^2$.  Establish
             paperLink.href = problemData.paperURL;
             paperLink.textContent = problemData.paperText;
 
-            // Render LaTeX after the content has been inserted
             renderMathInElement(document.body, {
                 delimiters: [
                     {left: '$$', right: '$$', display: true},
@@ -267,34 +247,22 @@ where $z_1, \\dots, z_N$ ranges over the unit sphere $\\mathbb{S}^2$.  Establish
                 throwOnError : false
             });
 
-            // ======================================================================
-            // START: ADDED JAVASCRIPT FOR NAVIGATION
-            // ======================================================================
             const totalProblems = 67;
-            const path = window.location.pathname;
-            const filename = path.split('/').pop(); // e.g., "31.html"
-            // Use parseInt with a radix of 10 to ensure correct number parsing
-            const currentProblemNumber = parseInt(filename, 10);
-
+            const currentProblemNumber = parseInt(window.location.pathname.split('/').pop(), 10) || 33;
             const prevLink = document.getElementById('prev-link');
             const nextLink = document.getElementById('next-link');
 
-            // Handle the "Previous" link
             if (currentProblemNumber > 1) {
                 prevLink.href = `${currentProblemNumber - 1}.html`;
             } else {
                 prevLink.classList.add('hidden');
             }
 
-            // Handle the "Next" link
             if (currentProblemNumber < totalProblems) {
                 nextLink.href = `${currentProblemNumber + 1}.html`;
             } else {
                 nextLink.classList.add('hidden');
             }
-            // ======================================================================
-            // END: ADDED JAVASCRIPT FOR NAVIGATION
-            // ======================================================================
         }
     </script>
 </body>
