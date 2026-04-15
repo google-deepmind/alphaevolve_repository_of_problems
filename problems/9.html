@@ -109,6 +109,10 @@
         .resources-list a:hover {
             text-decoration: underline;
         }
+        .experiment-link { color: #0d9488; } /* teal-600 */
+        .experiment-link:hover { color: #0f766e; } /* teal-700 */
+        .experiment-icon { color: #14b8a6; } /* teal-500 */
+
         .colab-link { color: #2563eb; } /* blue-600 */
         .colab-link:hover { color: #1d4ed8; } /* blue-800 */
         .colab-icon { color: #3b82f6; } /* blue-500 */
@@ -172,6 +176,13 @@
                 <h2>Resources</h2>
                 <ul class="resources-list">
                     <li>
+                        <svg class="experiment-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                        <a id="experiment-link" href="#" target="_blank" rel="noopener noreferrer" class="experiment-link">
+                            </a>
+                    </li>
+                    <li>
                         <svg class="colab-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -204,7 +215,7 @@
     <script>
         // ======================================================================
         //
-        //                  EDIT THIS SECTION FOR EACH NEW PROBLEM
+        //                 EDIT THIS SECTION FOR EACH NEW PROBLEM
         //
         // ======================================================================
 
@@ -232,6 +243,9 @@ Establish upper and lower bounds for $C^T(n)$, $C^P(n)$, $S^T(n)$, $S^P(n)$ that
                 </p>
             `,
 
+            experimentURL: "https://alphaevolve-examples.web.app/ae/experiment/8177393c_d974_4ea4_a94a_0a86760e72e7",
+            experimentText: "Link to Experiment",
+
             colabURL: "https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/kakeya_needle_2d/kakeya_needle_2d.ipynb",
             colabText: "Explore in Google Colab",
 
@@ -252,6 +266,10 @@ Establish upper and lower bounds for $C^T(n)$, $C^P(n)$, $S^T(n)$, $S^P(n)$ that
             document.getElementById('problem-title').innerHTML = problemData.title;
             document.getElementById('problem-statement').innerHTML = problemData.statement;
             document.getElementById('problem-comments').innerHTML = problemData.comments;
+
+            const experimentLink = document.getElementById('experiment-link');
+            experimentLink.href = problemData.experimentURL;
+            experimentLink.textContent = problemData.experimentText;
 
             const colabLink = document.getElementById('colab-link');
             colabLink.href = problemData.colabURL;
