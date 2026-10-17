@@ -82,6 +82,15 @@
             margin: 0;
         }
 
+        table {
+          border: 2px solid rgb(140 140 140);
+        }
+
+        th,
+        td {
+          border: 1px solid rgb(160 160 160);
+        }
+
         /* Resources List */
         .resources-list {
             list-style: none;
@@ -221,7 +230,38 @@ For any $n \\geq 1$ and a geometric shape $P$ (e.g. a polygon, a polytope or a s
 
             comments: `
                 <p>
-
+For packing $n=11$ unit cubes into a cube $P = [-1/2, 1/2]^3$, the known upper bounds for $C(11, [-1/2, 1/2]^3)$ are:
+     <table>
+  <caption>
+    Upper bounds for $C(11, [-1/2, 1/2]^3)$
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$2.8963$</td>
+      <td>Gensane-Ryckelynck</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <td scope="row">$2.8946$ ($2.89453115$)</td>
+      <td><A HREF="https://arxiv.org/abs/2511.02864">Georgiev-Gómez-Serrano-Tao-Wagner</A> [<A HREF="https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/packing_unit_cubes/packing_unit_cubes.ipynb">Colab</A>]</td>
+      <td>14 May 2025</td>
+    </tr>
+    <tr>
+      <td scope="row">$2 + \frac{2}{\sqrt{5}} \approx 2.89442719$</td>
+      <td><A HREF="https://github.com/unclegareth-create">Gareth Montgomery</A> [<A HREF="https://github.com/google-deepmind/alphaevolve_repository_of_problems/blob/main/experiments/packing_unit_cubes/packing_unit_cubes.ipynb">Colab</A>]</td>
+      <td>2026</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+The exact bound $S^* = 2 + 2/\sqrt{5} \approx 2.8944271910$ is obtained by enforcing exact $C_3$ rotational symmetry around the body diagonal $(+x, -y, +z)$ on the 8 corner cubes at $(\pm w, \pm w, \pm w)$ ($w = (S-1)/2$) and the 3 single-axis tilted inner cubes at $(u, v, w)$ with Euler angles $(0, 0, -\theta)$, $(v, -w, -u)$ with $(0, \theta, 0)$, and $(-w, u, -v)$ with $(\theta, 0, 0)$. Adding the three tight non-overlap inequalities eliminates $(u, v)$ identically and yields $S(\theta) = 2 + \frac{2}{2\cos\theta + \sin\theta} \geq 2 + \frac{2}{\sqrt{5}}$ with equality at $\theta^* = \arctan(1/2)$, $w^* = \frac{1}{2} + \frac{1}{\sqrt{5}}$, $u^* = \frac{3}{10\sqrt{5}}$, $v^* = \frac{1}{10\sqrt{5}}$, and pairwise inner separating normal $(1/3, 2/3, 2/3)$.
                 </p>
             `,
 

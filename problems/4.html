@@ -82,6 +82,15 @@
             margin: 0;
         }
 
+        table {
+          border: 2px solid rgb(140 140 140);
+        }
+
+        th,
+        td {
+          border: 1px solid rgb(160 160 160);
+        }
+
         /* Resources List */
         .resources-list {
             list-style: none;
@@ -224,7 +233,66 @@ for all $f \\colon [-1/4,1/4] \\to \\mathbb{R}$ (note $f$ can take negative valu
 
             comments: `
                 <p>
-                This is one of two very similar optimization problems, both of which have been studied in the literature, with some results for one problem incorrectly attributed to another.  We will update the references on this problem (and add its sibling) soon.
+                This is one of two closely related optimization problems studied in the literature: $C'_4$ (defined above with $|\cdot|$ inside the maximum, i.e. $\max_{-1/2 \leq t \leq 1/2} |(f*f)(t)|$) and its sibling $C_4$ (defined with $\left|\max_{-1/2 \leq t \leq 1/2} (f*f)(t)\right|$).
+     <table>
+  <caption>
+    Upper bounds for $C'_4$ (with $|\cdot|$ inside the maximum)
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$1.4993$</td>
+      <td><A HREF="https://arxiv.org/abs/0907.1379">Matolcsi-Vinuesa</A></td>
+      <td>8 Jul 2009</td>
+    </tr>
+    <tr>
+      <td scope="row">$1.4688$ ($1.46876207$)</td>
+      <td><A HREF="https://arxiv.org/abs/2511.02864">Georgiev-Gómez-Serrano-Tao-Wagner</A> [<A HREF="https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb">Colab</A>]</td>
+      <td>14 May 2025</td>
+    </tr>
+    <tr>
+      <td scope="row">$1.4600$ ($1.45998905$)</td>
+      <td><A HREF="https://github.com/unclegareth-create">Gareth Montgomery</A> ($N=600$; $1.46218795$ at $N=150$)</td>
+      <td>2026</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+     <table>
+  <caption>
+    Upper bounds for $C_4$ (sibling problem without $|\cdot|$ inside the maximum)
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Bound</th>
+      <th scope="col">Source</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">$1.4581$</td>
+      <td>Vinuesa</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <td scope="row">$1.4557$ ($1.45564280$)</td>
+      <td><A HREF="https://arxiv.org/abs/2511.02864">Georgiev-Gómez-Serrano-Tao-Wagner</A> [<A HREF="https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb">Colab</A>]</td>
+      <td>14 May 2025</td>
+    </tr>
+    <tr>
+      <td scope="row">$1.4555$ ($1.45546495$)</td>
+      <td><A HREF="https://github.com/unclegareth-create">Gareth Montgomery</A> ($N=800$)</td>
+      <td>2026</td>
+    </tr>
+  </tbody>
+</table>
                 </p>
             `,
 
